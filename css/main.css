@@ -17,11 +17,19 @@ body {
 
 .nav_bar ul {
     list-style-type: none;
-    display: inline;
+    display: inline-flex;
 }
 
-.nav_bar_items {
+.nav_bar_items ul {
     list-style-type: none;
-    display: inline;
+    display: inline-flex;
     font-family: 'Lato', sans-serif;
+}
+
+.nav_bar_items li {
+    list-style-type: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 23px;
+    display: inline-flex;
+    margin-right: 40%;
 }
