@@ -15,7 +15,13 @@ body {
     left: 0px;
 }
 
-.navbar ul {
+.nav_bar ul {
     list-style-type: none;
     display: inline;
+}
+
+.nav_bar_items {
+    list-style-type: none;
+    display: inline;
+    font-family: 'Lato', sans-serif;
 }
