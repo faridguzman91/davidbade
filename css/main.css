@@ -5,6 +5,30 @@ body {
     background-color: rgb(209, 209, 209);
 }
 
+h1,
+h2,
+h3,
+p,
+a {
+    font-family: 'Lato', sans-serif;
+    line-height: 0px;
+    text-decoration: none;
+    text-rendering: optimizeSpeed;
+}
+
+.david_bade h1 {
+    font-size: 8rem;
+    position: relative;
+    top: 40vh;
+    width: 100%;
+    left: 5vw;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    box-sizing: content-box;
+    display: inline
+}
+
 .contentContainer {
     margin: auto;
 }
