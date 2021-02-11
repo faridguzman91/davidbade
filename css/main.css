@@ -1,0 +1,21 @@
+html,
+body {
+    padding: 0px;
+    width: 100vh;
+    background-color: rgb(209, 209, 209);
+}
+
+.contentContainer {
+    margin: auto;
+}
+
+.nav_bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: inline;
+}
