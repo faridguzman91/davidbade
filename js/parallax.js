@@ -7,7 +7,7 @@ var isIe =
 var scrollSensitivitySetting = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive)
 var slideDurationSetting = 600; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
-var totalSlideNumber = $(".background").length;
+var totalSlideNumber = $(".section").length;
 
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
@@ -57,11 +57,11 @@ window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {
-    var $previousSlide = $(".background").eq(currentSlideNumber - 1);
+    var $previousSlide = $(".section").eq(currentSlideNumber - 1);
     $previousSlide.removeClass("up-scroll").addClass("down-scroll");
 }
 
 function previousItem() {
-    var $currentSlide = $(".background").eq(currentSlideNumber);
+    var $currentSlide = $(".section").eq(currentSlideNumber);
     $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }

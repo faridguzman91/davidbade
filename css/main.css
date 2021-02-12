@@ -9,9 +9,85 @@ a {
     color: white;
 }
 
+
+/* here begins parallax scroll css */
+
+
+/*
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* background is a section, maybe this is unnecessary? 
+
+
+.section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 130vh;
+    position: fixed;
+    width: 100%;
+    transform: translateY(30vh);
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+*/
+
+.section:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.section.up-scroll {
+    transform: translate3d(0, -15vh, 0);
+}
+
+.section.up-scroll .content-wrapper {
+    transform: translateY(15vh);
+}
+
+.section.up-scroll+.background {
+    transform: translate3d(0, 30vh, 0);
+}
+
+.background.up-scroll+.section .content-wrapper {
+    transform: translateY(30vh);
+}
+
+.section.down-scroll {
+    transform: translate3d(0, -130vh, 0);
+}
+
+.section.down-scroll .content-wrapper {
+    transform: translateY(40vh);
+}
+
+.section.down-scroll+.section:not(.down-scroll) {
+    transform: translate3d(0, -15vh, 0);
+}
+
+.section.down-scroll+.section:not(.down-scroll) .content-wrapper {
+    transform: translateY(15vh);
+}
+
+
+/*here ends parallax scroll css*/
+
+
+/*here begins bootstrap */
+
 .wrapper {
     min-height: 100vh;
-    font-family: "Roboto Slab", serif;
+    font-family: "Roboto", serif;
     font-weight: 300;
     color: #fff;
     position: relative;
@@ -25,6 +101,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    /*will-change: transform;*/
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
 }
 
 section:nth-child(1) {
@@ -159,4 +237,4 @@ section:nth-child(7) {
 }
 
 
-/* end of bootstrap.js */
+/* end of bootstrap css */
