@@ -36,6 +36,9 @@ a {
 
 */
 
+
+/*
+
 .section:before {
     content: "";
     position: absolute;
@@ -130,6 +133,10 @@ section:nth-child(6) {
 }
 
 section:nth-child(7) {
+    background: #ffcc00;
+}
+
+section:nth-child(8) {
     background: #ffcc00;
 }
 
