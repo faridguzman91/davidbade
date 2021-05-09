@@ -1,6 +1,6 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: "nav-bar--naam nav-bar-home nav-bar--tijdlijn nav-bar--blog nav-bar--bio nav-bar--contact";
@@ -14,7 +14,7 @@ a {
 }
 
 .nav-bar--naam {
-    text-align: center;
+    text-align: left;
     border: 1px solid black;
     padding: 50px;
     font-size: 20px;
@@ -29,4 +29,38 @@ a {
     border: 1px solid black;
     padding: 50px;
     font-size: 20px;
+}
+
+section {
+    height: 85vh;
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 2fr 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas: "david__naam laatste__werken";
+    justify-items: stretch;
+    align-items: stretch;
+    height: 80vh;
+}
+
+.home-container .david__naam {
+    margin: 20% 40px;
+    padding: 40px;
+}
+
+.home-container .david__naam h1,
+.home-container .david__naam p {
+    font-family: 'Lato';
+}
+
+.home-container .david__naam h1 {
+    font-size: 4rem;
+}
+
+.home-container .david__naam p {
+    font-size: 2rem;
 }
