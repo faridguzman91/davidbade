@@ -1,0 +1,32 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "nav-bar--naam nav-bar-home nav-bar--tijdlijn nav-bar--blog nav-bar--bio nav-bar--contact";
+    border: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: inherit;
+}
+
+.nav-bar--naam {
+    text-align: center;
+    border: 1px solid black;
+    padding: 50px;
+    font-size: 20px;
+}
+
+.nav-bar--home,
+.nav-bar--tijdlijn,
+.nav-bar--blog,
+.nav-bar--bio,
+.nav-bar--contact {
+    text-align: center;
+    border: 1px solid black;
+    padding: 50px;
+    font-size: 20px;
+}

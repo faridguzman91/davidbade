@@ -129,15 +129,27 @@ section:nth-child(5) {
 }
 
 section:nth-child(6) {
-    background: #03C9A9;
+    background: #03c94c;
 }
 
 section:nth-child(7) {
-    background: #ffcc00;
+    background: #1100ff;
 }
 
 section:nth-child(8) {
-    background: #ffcc00;
+    background: #ff0000;
+}
+
+section:nth-child(9) {
+    background: #005e6f;
+}
+
+section:nth-child(10) {
+    background: #01771e;
+}
+
+section:nth-child(11) {
+    background: #005859;
 }
 
 .nav__wrapper {
