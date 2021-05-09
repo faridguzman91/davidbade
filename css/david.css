@@ -1,3 +1,8 @@
+:root {
+    --canvas-border-color: #e0e0e0;
+    --canvas-shadow-color: rgba(68, 68, 68, 0.5);
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
@@ -48,7 +53,7 @@ section {
 }
 
 .home-container .david__naam {
-    margin: 20% 40px;
+    margin: 10% 40px;
     padding: 40px;
 }
 
@@ -58,9 +63,40 @@ section {
 }
 
 .home-container .david__naam h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .home-container .david__naam p {
     font-size: 2rem;
+}
+
+.home-container .laatste__werken {
+    height: 80vh;
+}
+
+.home-container .laatste__werken--container {
+    height: 60vh;
+    display: flex;
+    margin: 10%;
+}
+
+.home-container .laatste__werken--werk1 {
+    border: 8px solid var(--canvas-border-color);
+    box-shadow: 0px 2px 2px 2px var(--canvas-shadow-color);
+    width: 400px;
+    height: 500px;
+}
+
+.home-container .laatste__werken--werk2 {
+    border: 8px solid var(--canvas-border-color);
+    box-shadow: 0px 2px 2px 2px var(--canvas-shadow-color);
+    width: 400px;
+    height: 500px;
+}
+
+.home-container .laatste__werken--werk3 {
+    border: 8px solid var(--canvas-border-color);
+    box-shadow: 0px 2px 2px 2px var(--canvas-shadow-color);
+    width: 400px;
+    height: 500px;
 }
