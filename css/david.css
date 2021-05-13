@@ -3,6 +3,11 @@
     --canvas-shadow-color: rgba(68, 68, 68, 0.5);
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
@@ -36,6 +41,41 @@ a {
     font-size: 20px;
 }
 
+.nav-bar--tijdlijn:hover,
+.nav-bar--tijdlijn a:hover {
+    background-color: green;
+    color: white;
+    transition: .5s ease;
+}
+
+.nav-bar--home:hover,
+.nav-bar--home a:hover {
+    background-color: blue;
+    color: white;
+    transition: .5s ease;
+}
+
+.nav-bar--blog:hover,
+.nav-bar--blog a:hover {
+    background-color: red;
+    color: white;
+    transition: .5s ease;
+}
+
+.nav-bar--bio:hover,
+.nav-bar--bio a:hover {
+    background-color: rgb(255, 145, 0);
+    color: white;
+    transition: .5s ease;
+}
+
+.nav-bar--contact:hover,
+.nav-bar--contact a:hover {
+    background-color: rgb(255, 0, 132);
+    color: white;
+    transition: .5s ease;
+}
+
 section {
     height: 85vh;
 }
@@ -64,20 +104,29 @@ section {
 
 .home-container .david__naam h1 {
     font-size: 5rem;
+    font-weight: 200;
 }
 
 .home-container .david__naam p {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
 }
 
 .home-container .laatste__werken {
     height: 80vh;
 }
 
+.home-container .laatste__werken p {
+    top: 5%;
+    font-size: 2rem;
+    position: relative;
+    left: 10%;
+}
+
 .home-container .laatste__werken--container {
     height: 60vh;
     display: flex;
-    margin: 10%;
+    margin: 8%;
 }
 
 .home-container .laatste__werken--werk1 {
@@ -87,6 +136,11 @@ section {
     height: 500px;
 }
 
+.home-container .laatste__werken--werk1 img {
+    width: 100%;
+    height: 100%;
+}
+
 .home-container .laatste__werken--werk2 {
     border: 8px solid var(--canvas-border-color);
     box-shadow: 0px 2px 2px 2px var(--canvas-shadow-color);
@@ -94,9 +148,358 @@ section {
     height: 500px;
 }
 
+.home-container .laatste__werken--werk2 img {
+    width: 100%;
+    height: 100%;
+}
+
 .home-container .laatste__werken--werk3 {
     border: 8px solid var(--canvas-border-color);
     box-shadow: 0px 2px 2px 2px var(--canvas-shadow-color);
     width: 400px;
     height: 500px;
+}
+
+.home-container .laatste__werken--werk3 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/**************tijdlijn***********/
+
+
+/* here begins parallax scroll css */
+
+
+/*
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* background is a section, maybe this is unnecessary? 
+
+
+.section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 130vh;
+    position: fixed;
+    width: 100%;
+    transform: translateY(30vh);
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+*/
+
+
+/*
+
+.section:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.section.up-scroll {
+    transform: translate3d(0, -15vh, 0);
+}
+
+.section.up-scroll .content-wrapper {
+    transform: translateY(15vh);
+}
+
+.section.up-scroll+.background {
+    transform: translate3d(0, 30vh, 0);
+}
+
+.background.up-scroll+.section .content-wrapper {
+    transform: translateY(30vh);
+}
+
+.section.down-scroll {
+    transform: translate3d(0, -130vh, 0);
+}
+
+.section.down-scroll .content-wrapper {
+    transform: translateY(40vh);
+}
+
+.section.down-scroll+.section:not(.down-scroll) {
+    transform: translate3d(0, -15vh, 0);
+}
+
+.section.down-scroll+.section:not(.down-scroll) .content-wrapper {
+    transform: translateY(15vh);
+}
+
+
+/*here ends parallax scroll css*/
+
+
+/*here begins bootstrap */
+
+.wrapper {
+    min-height: 100vh;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+section {
+    height: 100vh;
+    font-size: 40px;
+    font-weight: 100;
+    background-color: #22A7F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*will-change: transform;*/
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+section:nth-child(1) {
+    background: rgb(255, 255, 255);
+}
+
+section:nth-child(2) {
+    background: #F64747;
+}
+
+section:nth-child(3) {
+    background: #22A7F0;
+}
+
+section:nth-child(4) {
+    background: #F9690E;
+}
+
+section:nth-child(5) {
+    background: #9B59B6;
+}
+
+section:nth-child(6) {
+    background: #03c94c;
+}
+
+section:nth-child(7) {
+    background: #1100ff;
+}
+
+section:nth-child(8) {
+    background: #ff0000;
+}
+
+section:nth-child(9) {
+    background: #005e6f;
+}
+
+section:nth-child(10) {
+    background: #01771e;
+}
+
+section:nth-child(11) {
+    background: #005859;
+}
+
+.nav__wrapper {
+    position: fixed;
+    height: 80vh;
+    padding: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+}
+
+.nav {
+    margin: 0 0 100px 30px;
+    list-style-type: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.nav__counter {
+    font-size: 24px;
+    transition: all 0.15s ease-out;
+}
+
+.nav__title {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0 0 0.25em;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+.nav__body {
+    font-weight: 100;
+    font-size: 18px;
+    font-size: 18px;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+.nav li {
+    position: relative;
+    transition: all 0.3s ease-out;
+    margin-bottom: -1.5rem;
+}
+
+.nav li:after {
+    content: "";
+    display: block;
+    border-left: 2px solid rgb(0, 0, 0);
+    border-top: 2px solid rgb(0, 0, 0);
+    height: 250px;
+    width: 20px;
+    position: absolute;
+    left: -30px;
+    top: 15px;
+}
+
+.nav li a {
+    display: block;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    transition: all 0.15s ease-out;
+}
+
+.nav li a:hover {
+    background-color: transparent;
+    padding-left: 1em;
+}
+
+.nav li a:focus {
+    background-color: transparent;
+}
+
+.nav li.active {
+    pointer-events: none;
+    padding-left: 1em;
+}
+
+.nav li.active:after {
+    width: 35px;
+    height: 400px;
+    top: 35px;
+}
+
+.nav li.active .nav__counter {
+    font-size: 48px;
+}
+
+.nav li.active .nav__title {
+    height: 40px;
+    opacity: 1;
+    overflow: visible;
+}
+
+.nav li.active .nav__body {
+    height: 100px;
+    opacity: 1;
+    overflow: visible;
+}
+
+
+/* end of bootstrap css */
+
+
+/***********cards-scrollable**********/
+
+.cards-wrapper {
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    /*transform: translateY(-50%);*/
+    z-index: 10000000000;
+}
+
+.cards {
+    font-size: 0;
+    padding: 0 16px;
+    position: relative;
+    left: 0;
+    white-space: nowrap;
+    transition: 1.1s ease;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background: #c8c8c8;
+    display: inline-block;
+    margin-right: 16px;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cards-nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 80px;
+}
+
+.cards-nav-left,
+.cards-nav-right {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.66);
+    cursor: pointer;
+    width: 48px;
+    height: 72px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s ease;
+}
+
+.cards-nav-left:hover,
+.cards-nav-right:hover {
+    background: white;
+}
+
+.cards-nav-left svg,
+.cards-nav-right svg {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    fill: #090956;
+}
+
+.cards-nav-left {
+    left: 0;
+}
+
+.cards-nav-right {
+    right: 0;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.25;
 }
