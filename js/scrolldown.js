@@ -10,7 +10,7 @@ $("a[href*=#]:not([href=#])").click(function() {
             $("html,body").animate({
                     scrollTop: target.offset().top
                 },
-                1000
+                500
             );
             return false;
         }

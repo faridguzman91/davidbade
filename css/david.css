@@ -15,6 +15,8 @@ body {
     gap: 0px 0px;
     grid-template-areas: "nav-bar--naam nav-bar-home nav-bar--tijdlijn nav-bar--blog nav-bar--bio nav-bar--contact";
     border: 1px solid black;
+    position: fixed;
+    z-index: 100;
 }
 
 a {
@@ -272,49 +274,49 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-    background: #F64747;
+    background: #ffffff;
 }
 
 section:nth-child(3) {
-    background: #22A7F0;
+    background: #ffffff;
 }
 
 section:nth-child(4) {
-    background: #F9690E;
+    background: #ffffff;
 }
 
 section:nth-child(5) {
-    background: #9B59B6;
+    background: #ffffff;
 }
 
 section:nth-child(6) {
-    background: #03c94c;
+    background: #ffffff;
 }
 
 section:nth-child(7) {
-    background: #1100ff;
+    background: #ffffff;
 }
 
 section:nth-child(8) {
-    background: #ff0000;
+    background: #ffffff;
 }
 
 section:nth-child(9) {
-    background: #005e6f;
+    background: #ffffff;
 }
 
 section:nth-child(10) {
-    background: #01771e;
+    background: #ffffff;
 }
 
 section:nth-child(11) {
-    background: #005859;
+    background: #ffffff;
 }
 
 .nav__wrapper {
     position: fixed;
-    height: 80vh;
-    padding: 30px;
+    height: 100%;
+    padding: 60px 0px 0px 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
@@ -421,11 +423,11 @@ section:nth-child(11) {
 /***********cards-scrollable**********/
 
 .cards-wrapper {
-    position: absolute;
-    left: 20%;
-    top: 40%;
-    /*transform: translateY(-50%);*/
-    z-index: 10000000000;
+    position: relative;
+    top: 10%;
+    transform: translateX(10%);
+    z-index: 1;
+    width: 80%;
 }
 
 .cards {
